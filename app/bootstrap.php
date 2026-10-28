@@ -38,6 +38,7 @@ if (session_status() === PHP_SESSION_NONE) {
 require ROOT_PATH . '/app/helpers.php';
 require ROOT_PATH . '/app/db.php';
 require ROOT_PATH . '/app/csrf.php';
+require ROOT_PATH . '/app/auth.php';
 
 /**
  * Lee un valor de la configuración usando "punto" para niveles: config('db.host').

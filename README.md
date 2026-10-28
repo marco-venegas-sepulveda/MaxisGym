@@ -47,13 +47,29 @@ Contraseña de todos: `password`
 | Empleado (Recepción) | laura@example.com |
 | Socio | juan@example.com |
 
+## Seguridad
+
+- Contraseñas guardadas con `password_hash()` (bcrypt); nunca en texto plano.
+- Todas las consultas usan sentencias preparadas de PDO (sin inyección SQL).
+- Todo lo que se imprime pasa por `e()` (`htmlspecialchars`) para evitar XSS.
+- Token CSRF en todos los formularios POST y en las peticiones AJAX.
+- Control de acceso por **permisos** leídos de la base de datos
+  (`roles` → `rol_permiso` → `permisos`). Si alguien entra a una página que no
+  le corresponde, el servidor lo regresa a su propio panel con un aviso.
+- El registro público siempre crea usuarios con rol *socio*.
+- "Recordarme" usa un token aleatorio; en la base sólo se guarda su hash.
+
 ## Estructura de carpetas
 
 ```
 maxisgym/
-├── app/            Código compartido (conexión, seguridad, funciones de ayuda)
+├── admin/          Panel del administrador (socios, empleados, planes, reportes)
+├── empleado/       Panel de recepción (pagos, alta de socios, consultas, avisos)
+├── socio/          Panel del socio (membresía, historial de pagos)
+├── cuenta/         Páginas de cualquier usuario con sesión (perfil, avisos)
+├── app/            Código compartido (conexión, seguridad, permisos, vistas)
 ├── assets/         CSS, JavaScript, imágenes y librerías locales
 ├── config/         Configuración (base de datos, zona horaria, correo)
 ├── database/       Scripts SQL (estructura y datos de demostración)
-└── *.php           Páginas del sitio
+└── *.php           Sitio público, login, registro y cierre de sesión
 ```

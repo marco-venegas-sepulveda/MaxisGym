@@ -50,7 +50,11 @@ $menu = [
                     </li>
                 <?php endforeach; ?>
                 <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
-                    <a class="btn btn-seguridad btn-sm px-3" href="<?= url('login.php') ?>">Iniciar sesión</a>
+                    <?php if ($yo = usuario_actual()): ?>
+                        <a class="btn btn-seguridad btn-sm px-3" href="<?= url(panel_de($yo)) ?>">Mi panel</a>
+                    <?php else: ?>
+                        <a class="btn btn-seguridad btn-sm px-3" href="<?= url('login.php') ?>">Iniciar sesión</a>
+                    <?php endif; ?>
                 </li>
             </ul>
         </div>
