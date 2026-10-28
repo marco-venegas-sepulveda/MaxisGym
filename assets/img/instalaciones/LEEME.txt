@@ -1,0 +1,9 @@
+Fotos de la pantalla "Acerca de".
+
+Coloca aquí fotos reales del gimnasio con estos nombres exactos:
+  pesas.jpg    -> Área de pesas
+  cardio.jpg   -> Zona de cardio
+  clases.jpg   -> Salón de clases
+
+Formato recomendado: JPG horizontal (4:3), unos 1200 x 900 px.
+Si una foto no existe, la página muestra un recuadro con ícono en su lugar.

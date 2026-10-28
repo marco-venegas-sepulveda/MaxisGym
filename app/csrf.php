@@ -36,9 +36,9 @@ function csrf_valido(): bool
 function csrf_verificar(): void
 {
     if ($_SERVER['REQUEST_METHOD'] === 'POST' && !csrf_valido()) {
-        http_response_code(419);
+        http_response_code(403);
         if (es_ajax()) {
-            responder_json(['ok' => false, 'mensaje' => 'La sesión expiró. Recarga la página.'], 419);
+            responder_json(['ok' => false, 'mensaje' => 'La sesión expiró. Recarga la página.'], 403);
         }
         exit('La sesión expiró o el formulario no es válido. Regresa y recarga la página.');
     }

@@ -8,6 +8,9 @@
 --   * mensajes_contacto y password_reset_tokens quedan enlazadas con llaves foráneas
 -- =====================================================================
 
+-- Asegura que los acentos y la ñ se guarden bien sin importar la terminal
+SET NAMES utf8mb4;
+
 DROP DATABASE IF EXISTS maxisgym;
 CREATE DATABASE maxisgym CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 USE maxisgym;

@@ -32,6 +32,17 @@ $config = [
         'password' => '',
     ],
 
+    // Datos del gimnasio que aparecen en el sitio público
+    'gimnasio' => [
+        'direccion'  => 'Av. Universidad 1500, San Nicolás de los Garza, N.L.',
+        'telefono'   => '81 1234 5678',
+        'email'      => 'contacto@maxisgym.com',
+        'horario'    => ['Lunes a viernes: 6:00 a 22:00', 'Sábado y domingo: 7:00 a 15:00'],
+        // Coordenadas para el mapa de la página de contacto
+        'latitud'    => 25.7253,
+        'longitud'   => -100.3127,
+    ],
+
     // Correo saliente.
     // 'archivo' guarda cada correo en storage/correos/ (para pruebas en clase).
     // 'mail' usa la función mail() de PHP (requiere configurar SMTP en Laragon).

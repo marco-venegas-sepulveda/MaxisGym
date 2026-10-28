@@ -6,6 +6,9 @@
 --  membresías activas, por vencer (7, 3 y 1 día) y vencidas.
 --  Contraseña de todos los usuarios de prueba: "password"
 -- =====================================================================
+-- Asegura que los acentos y la ñ se guarden bien sin importar la terminal
+SET NAMES utf8mb4;
+
 USE maxisgym;
 
 SET @hash = '$2y$12$h2q0pqGxRRP2rCuVwexyJu5XwUwsh16ueVMQX9QByg12qmfS5C9Cy';
