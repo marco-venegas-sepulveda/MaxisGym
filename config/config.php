@@ -20,6 +20,14 @@ $config = [
     // (funciona en http://localhost/maxisgym y en http://maxisgym.test).
     'base_url' => null,
 
+    // Dirección pública del sitio para los enlaces de los correos, p. ej.
+    // 'https://maxisgym.com/'. null = se usa el dominio de la petición
+    // (suficiente en Laragon; en producción conviene fijarla).
+    'url_publica' => null,
+
+    // Minutos que dura el enlace para restablecer la contraseña
+    'recuperacion_minutos' => 30,
+
     // Zona horaria del gimnasio
     'timezone' => 'America/Monterrey',
 

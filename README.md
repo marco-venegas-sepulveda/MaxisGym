@@ -37,6 +37,13 @@ así que el sistema funciona sin conexión a internet.
 Si tu MySQL tiene contraseña u otro usuario, copia `config/config.local.example.php`
 como `config/config.local.php` y escribe ahí tus datos.
 
+## Correos
+
+En modo prueba (`'mail' => ['driver' => 'archivo']` en `config/config.php`) los correos
+no se envían: cada uno se guarda como página HTML en `storage/correos/`.
+Ábrelos con doble clic para ver, por ejemplo, el enlace para restablecer la contraseña.
+Para enviarlos de verdad, configura el SMTP de Laragon y cambia el driver a `'mail'`.
+
 ## Usuarios de prueba
 
 Contraseña de todos: `password`
